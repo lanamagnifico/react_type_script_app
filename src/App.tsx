@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Counter from './components/counter/Counter';
 
 interface AppProps {}
 
@@ -12,6 +13,7 @@ function App({}: AppProps) {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <Counter />
         <a
           className="App-link"
           href="https://reactjs.org"
