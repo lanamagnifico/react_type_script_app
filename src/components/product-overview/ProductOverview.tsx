@@ -1,7 +1,8 @@
 import React from "react";
 
 import Product from '../product/Product';
-import ProductCard from '../product/ProductCard';
+import ProductRow from '../product/ProductRow';
+import Grid from "@material-ui/core/Grid";
 
 interface Props {
     productList: Product[];
@@ -9,9 +10,15 @@ interface Props {
 
 const ProductOverview: React.FunctionComponent<Props> = (props) => {
     return (
-        <div>{props.productList.map(item => 
-            <ProductCard product = {item} />
-        )}</div>
+        <div>
+            <Grid container justify="flex-start" spacing={1} >
+                <Grid item spacing={5}>ID</Grid>
+                <Grid item spacing={5}>Name</Grid>
+            </Grid>
+            {props.productList.map(item =>
+                <ProductRow product={item} />
+            )}
+        </div>
     )
 };
   
