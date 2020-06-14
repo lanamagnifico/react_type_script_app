@@ -10,5 +10,11 @@ const theme = createMuiTheme({
     secondary: {
       main: lime[500],
     },
+    background: {
+      default: teal[100],
+      paper: lime[100],
+    },
   },
 });
+
+export default theme;

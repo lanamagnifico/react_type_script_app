@@ -12,27 +12,18 @@ const MealPlan: React.FunctionComponent<Props> = (props) => {
         <Typography variant="h4">
             Meal plan
         </Typography>
-        <Grid container spacing={3}>
-            <Grid item>
+        <Grid container spacing={3} justify={'space-around'}>
+            <Grid item md={3}>
                 <MealPlanDayList mealPlanDay={data[0]} />
             </Grid>
-            <Grid item>
+            <Grid item md={3}>
                 <MealPlanDayList mealPlanDay={data[1]} />
             </Grid>
-            <Grid item>
+            <Grid item md={3}>
                 <MealPlanDayList mealPlanDay={data[2]} />
             </Grid>
-            <Grid item>
+            <Grid item md={3}>
                 <MealPlanDayList mealPlanDay={data[3]} />
-            </Grid>
-            <Grid item>
-                <MealPlanDayList mealPlanDay={data[4]} />
-            </Grid>
-            <Grid item>
-                <MealPlanDayList mealPlanDay={data[5]} />
-            </Grid>
-            <Grid item>
-                <MealPlanDayList mealPlanDay={data[6]} />
             </Grid>
         </Grid>
     </div>)
