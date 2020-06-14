@@ -12,7 +12,7 @@ interface Props {
 const ShoppingList: React.FunctionComponent<Props> = (props) => {
     return (<div>
         <Typography variant="h4">
-            Shooping List
+            Shopping List
         </Typography>
         <List>
             {props.items.map((item, i) =>

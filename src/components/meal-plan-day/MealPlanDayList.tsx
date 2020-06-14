@@ -14,17 +14,17 @@ const MealPlanDayList: React.FunctionComponent<Props> = (props) => {
         <Typography variant="subtitle1">
             {props.mealPlanDay.day.toLocaleString('en-us', { weekday: 'long' })}
         </Typography>
-        <List>
+        <List dense={true}>
             {props.mealPlanDay.meals.map((meal: Product, i: number) =>
                 <ListItem dense key={i}>
-                    <ListItemIcon>
-                        <Checkbox
+                    {/* <ListItemIcon>
+                         <Checkbox
                             edge="start"
                             checked={true}
                             tabIndex={-1}
                             disableRipple
-                        />
-                    </ListItemIcon>
+                        /> 
+                    </ListItemIcon> */}
                     <ListItemText primary={meal.name} secondary={meal.name} />
                 </ListItem>
             )}

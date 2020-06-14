@@ -12,7 +12,7 @@ interface Props {
 
 const ShoppingItem: React.FunctionComponent<Props> = (props) => {
     return (<ListItem dense key={props.product.id}>
-        <ListItemText primary={props.product.name} secondary={props.product.id} />
+        <ListItemText primary={props.product.name} secondary={props.product.name} />
         <ListItemSecondaryAction>
               <IconButton edge="end" aria-label="delete">
                 <DeleteIcon />
