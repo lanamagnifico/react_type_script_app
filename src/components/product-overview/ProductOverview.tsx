@@ -1,6 +1,6 @@
 import React from "react";
 
-import Product from '../product/Product';
+import Product from '../../entity/Product';
 import ProductRow from '../product/ProductRow';
 import Grid from "@material-ui/core/Grid";
 

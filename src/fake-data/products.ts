@@ -1,4 +1,4 @@
-import Product from '../product/Product';
+import Product from '../entity/Product';
 import uuid from 'uuid';
 
 export const Products: Product[] = [
