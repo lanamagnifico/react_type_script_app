@@ -1,12 +1,12 @@
 import React from "react";
 
-import Product from '../product-row/Product';
-import ProductRow from '../product-row/ProductRow';
 import {
     TableContainer, Table, TableHead, TableRow,
     TableCell, TableBody, Paper, Theme, withStyles, WithStyles
 } from "@material-ui/core";
 import styles from './ProductOverviewStyles';
+import Product from '../../entity/Product';
+import ProductRow from '../product/ProductRow';
 
 interface Props extends WithStyles<typeof styles> {
     productList: Product[];

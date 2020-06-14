@@ -1,7 +1,7 @@
 import React from "react";
 
 import ProductOverview from '../product-overview/ProductOverview';
-import * as data from '../product-overview/products';
+import * as data from '../../fake-data/products';
 
 interface Props {
 };
