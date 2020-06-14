@@ -1,6 +1,14 @@
 import React from "react";
 
-import { List, ListItem, ListItemText, ListItemIcon, Checkbox, Typography } from "@material-ui/core";
+import {
+    List,
+    ListItem,
+    ListItemText,
+    ListItemSecondaryAction,
+    IconButton,
+    Typography
+} from "@material-ui/core";
+import DeleteIcon from '@material-ui/icons/Delete';
 
 import MealPlanDay from "../../entity/MealPlanDay";
 import Product from "../../entity/Product";
@@ -17,15 +25,12 @@ const MealPlanDayList: React.FunctionComponent<Props> = (props) => {
         <List dense={true}>
             {props.mealPlanDay.meals.map((meal: Product, i: number) =>
                 <ListItem dense key={i}>
-                    {/* <ListItemIcon>
-                         <Checkbox
-                            edge="start"
-                            checked={true}
-                            tabIndex={-1}
-                            disableRipple
-                        /> 
-                    </ListItemIcon> */}
                     <ListItemText primary={meal.name} secondary={meal.name} />
+                    <ListItemSecondaryAction>
+                        <IconButton edge="end" aria-label="delete">
+                            <DeleteIcon />
+                        </IconButton>
+                    </ListItemSecondaryAction>
                 </ListItem>
             )}
         </List>
