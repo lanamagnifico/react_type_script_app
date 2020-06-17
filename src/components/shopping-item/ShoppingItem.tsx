@@ -4,7 +4,7 @@ import { ListItem,
   ListItemText, 
   ListItemSecondaryAction, 
   IconButton } from "@material-ui/core";
-import DeleteIcon from '@material-ui/icons/Delete';
+import ClearIcon from '@material-ui/icons/Clear';
 
 import Product from "../../entity/Product";
 
@@ -18,7 +18,7 @@ const ShoppingItem: React.FunctionComponent<Props> = (props) => {
         <ListItemText primary={props.product.name} secondary={props.product.name} />
         <ListItemSecondaryAction>
               <IconButton edge="end" aria-label="delete">
-                <DeleteIcon />
+                <ClearIcon />
               </IconButton>
             </ListItemSecondaryAction>
     </ListItem>)

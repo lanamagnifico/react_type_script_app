@@ -8,7 +8,7 @@ import {
     IconButton,
     Typography
 } from "@material-ui/core";
-import DeleteIcon from '@material-ui/icons/Delete';
+import ClearIcon from '@material-ui/icons/Clear';
 
 import MealPlanDay from "../../entity/MealPlanDay";
 import Product from "../../entity/Product";
@@ -28,7 +28,7 @@ const MealPlanDayList: React.FunctionComponent<Props> = (props) => {
                     <ListItemText primary={meal.name} secondary={meal.name} />
                     <ListItemSecondaryAction>
                         <IconButton edge="end" aria-label="delete">
-                            <DeleteIcon />
+                            <ClearIcon />
                         </IconButton>
                     </ListItemSecondaryAction>
                 </ListItem>
