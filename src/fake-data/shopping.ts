@@ -1,7 +1,7 @@
-import Product from '../entity/Product';
+import IProduct from '../entity/Product';
 import uuid from 'uuid';
 
-export const Shopping: Product[] = [
+export const shopping: IProduct[] = [
     {
         id: uuid.v4(),
         name: 'eggs',

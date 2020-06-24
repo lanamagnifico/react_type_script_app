@@ -1,13 +1,20 @@
 import React from "react";
 
-import Product from '../../entity/Product';
-import { TableRow, WithStyles, withStyles, TableCell, IconButton, Checkbox } from "@material-ui/core";
+import IProduct from '../../entity/Product';
+import {
+  TableRow,
+  WithStyles,
+  withStyles,
+  TableCell,
+  IconButton,
+  Checkbox
+} from "@material-ui/core";
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit'; 
-import styles from './ProductRowStyles';
+import styles from './ProductRow.styles';
 
 interface Props extends WithStyles<typeof styles> {
-  product: Product;
+  product: IProduct;
 };
 
 const ProductRow = withStyles(styles)(class extends React.Component<Props> {

@@ -1,12 +1,15 @@
 import React from "react";
 
-import { List, Typography } from "@material-ui/core";
-import Product from "../../entity/Product";
-import ShoppingItem from '../shopping-item/ShoppingItem';
+import {
+    List,
+    Typography
+} from "@material-ui/core";
+import IProduct from "../../entity/Product";
+import ShoppingItem from '../shopping-item/ShoppingItem.component';
 
 
 interface Props {
-    items: Product[]
+    items: IProduct[]
 };
 
 const ShoppingList: React.FunctionComponent<Props> = (props) => {
@@ -14,7 +17,7 @@ const ShoppingList: React.FunctionComponent<Props> = (props) => {
         <Typography variant="h4">
             Shopping List
         </Typography>
-        <List>
+        <List aria-label={'shopping-list'}>
             {props.items.map((item, i) =>
                 <ShoppingItem key={i}
                     product={item} />

@@ -1,8 +1,8 @@
-import Product from "./Product";
+import IProduct from "./Product";
 
-interface MealPlanDay {
+interface IMealPlanDay {
     day: Date;
-    meals: Product[];
+    meals: IProduct[];
 }
 
-export default MealPlanDay;
+export default IMealPlanDay;

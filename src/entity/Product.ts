@@ -1,4 +1,4 @@
-interface Product {
+interface IProduct {
     id: string;
     name: string;
     readyToEat: boolean;
@@ -6,4 +6,4 @@ interface Product {
     category: string;
 };
 
-export default Product;
+export default IProduct;

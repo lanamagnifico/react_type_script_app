@@ -4,7 +4,8 @@
     "build": "snowpack build",
     "test": "jest",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
+    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "@material-ui/core": "^4.10.2",
@@ -19,8 +20,9 @@
     "@testing-library/react": "^10.0.3",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
-    "@types/uuid": "^8.0.0",
     "@types/react-router-dom": "^5.1.5",
+    "@types/uuid": "^8.0.0",
+    "cypress": "^4.9.0",
     "jest": "^25.4.0",
     "prettier": "^2.0.0",
     "snowpack": "^2.2.0",

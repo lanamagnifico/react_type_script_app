@@ -1,8 +1,8 @@
-import Product from '../entity/Product';
+import IProduct from '../entity/Product';
 import uuid from 'uuid';
-import MealPlanDay from '../entity/MealPlanDay';
+import IMealPlanDay from '../entity/MealPlanDay';
 
-export const MealPlanWeek: MealPlanDay[] = [{
+export const MealPlanWeek: IMealPlanDay[] = [{
     day: new Date(2020,5,1),
     meals: [
         {

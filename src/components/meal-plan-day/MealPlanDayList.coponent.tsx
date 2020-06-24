@@ -10,11 +10,11 @@ import {
 } from "@material-ui/core";
 import ClearIcon from '@material-ui/icons/Clear';
 
-import MealPlanDay from "../../entity/MealPlanDay";
-import Product from "../../entity/Product";
+import IMealPlanDay from "../../entity/MealPlanDay";
+import IProduct from "../../entity/Product";
 
 interface Props {
-    mealPlanDay: MealPlanDay;
+    mealPlanDay: IMealPlanDay;
 };
 
 const MealPlanDayList: React.FunctionComponent<Props> = (props) => {
@@ -22,8 +22,8 @@ const MealPlanDayList: React.FunctionComponent<Props> = (props) => {
         <Typography variant="subtitle1">
             {props.mealPlanDay.day.toLocaleString('en-us', { weekday: 'long' })}
         </Typography>
-        <List dense={true}>
-            {props.mealPlanDay.meals.map((meal: Product, i: number) =>
+        <List dense={true} aria-label="meal-pan-of-the-day">
+            {props.mealPlanDay.meals.map((meal: IProduct, i: number) =>
                 <ListItem dense key={i}>
                     <ListItemText primary={meal.name} secondary={meal.name} />
                     <ListItemSecondaryAction>

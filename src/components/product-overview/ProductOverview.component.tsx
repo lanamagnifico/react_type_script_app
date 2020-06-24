@@ -1,15 +1,21 @@
 import React from "react";
 
 import {
-    TableContainer, Table, TableHead, TableRow,
-    TableCell, TableBody, Paper, Theme, withStyles, WithStyles
+    TableContainer,
+    Table,
+    TableHead,
+    TableRow,
+    TableCell,
+    TableBody,
+    withStyles,
+    WithStyles
 } from "@material-ui/core";
-import styles from './ProductOverviewStyles';
-import Product from '../../entity/Product';
-import ProductRow from '../product-row/ProductRow';
+import styles from './ProductOverview.styles';
+import IProduct from '../../entity/Product';
+import ProductRow from '../product-row/ProductRow.component';
 
 interface Props extends WithStyles<typeof styles> {
-    productList: Product[];
+    productList: IProduct[];
 };
 
 const ProductOverview = withStyles(styles)(class extends React.Component<Props> {
@@ -25,8 +31,8 @@ const ProductOverview = withStyles(styles)(class extends React.Component<Props> 
                             <TableCell align="center">Category</TableCell>
                         </TableRow>
                     </TableHead>
-                    <TableBody>
-                        {productList.map((row: Product) => (
+                    <TableBody aria-label="products table body">
+                        {productList.map((row: IProduct) => (
                             <ProductRow key={row.id} product={row} />
                         ))}
                     </TableBody>

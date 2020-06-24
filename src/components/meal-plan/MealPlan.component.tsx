@@ -3,11 +3,11 @@ import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 
 import { MealPlanWeek as data } from '../../fake-data/meal-plans';
-import MealPlanDayList from "../meal-plan-day/MealPlanDayList";
+import MealPlanDayList from "../meal-plan-day/MealPlanDayList.coponent";
 
-interface Props { };
+interface IMealPlanProps { };
 
-const MealPlan: React.FunctionComponent<Props> = (props) => {
+const MealPlan: React.FunctionComponent<IMealPlanProps> = (props) => {
     return (<div>
         <Typography variant="h4">
             Meal plan
